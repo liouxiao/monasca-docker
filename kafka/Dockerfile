@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-ARG KAFKA_VERSION=0.9.0.1
+ARG KAFKA_VERSION=2.2.0
 ARG SCALA_VERSION=2.11
 ARG KAFKA_KEYS=https://kafka.apache.org/KEYS
 ARG ASC_MIRROR=https://dist.apache.org/repos/dist/release/kafka
@@ -13,6 +13,8 @@ ENV KAFKA_HOSTNAME_FROM_IP=true \
   KAFKA_MAX_MB="1024"
 
 COPY kafka_mirror.py /
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN set -x && \
   mkdir /kafka /data /logs && \

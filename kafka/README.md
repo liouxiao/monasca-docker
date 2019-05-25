@@ -11,9 +11,9 @@ Tags
 
 Images in this repository are tagged as follows:
 
- * `[kafka version]-[scala version]`, e.g. `0.9.0.1-2.11`
+ * `[kafka version]-[scala version]`, e.g. `2.2.0-2.11`
  * `latest`: the latest version recommended for use with other Monasca
-   components. Currently, this is `0.9.0.1-2.11`
+   components. Currently, this is `2.2.0-2.11`
  * `master`: a development / testing build not necessarily intended for
    production use
 
